@@ -129,22 +129,9 @@ function runDemo(PDO $pdo): void
         return;
     }
 
-    $messageId   = '<demo-' . uniqid() . '@crm.test>';
-    $onderwerpen = [
-        'Vraag over levertijd',
-        'Bevestiging afspraak',
-        'Aanvullende info gevraagd',
-        'Re: Voorstel showroom-update',
-        'Klacht over levering',
-    ];
-    $berichten = [
-        "Hoi,\n\nIk heb nog een vraag over de volgende bestelling. Kun je mij even bellen?\n\nGroeten,\n%s",
-        "Goedemorgen,\n\nDe afspraak op vrijdag is bevestigd. Tot dan.\n\n%s",
-        "Beste,\n\nKun je mij wat meer informatie sturen over de prijzen voor 2026?\n\nGroet,\n%s",
-    ];
-
-    $subject = $onderwerpen[array_rand($onderwerpen)];
-    $body    = sprintf($berichten[array_rand($berichten)], $dealer['name']);
+    $messageId = '<demo-' . uniqid() . '@crm.test>';
+    $subject   = pickRandomDemoSubject();
+    $body      = sprintf(pickRandomDemoBody(), $dealer['name']);
 
     try {
         $pdo->beginTransaction();
@@ -478,4 +465,35 @@ function insertInkomendeMail(
     ]);
 
     return $newId;
+}
+
+/**
+ * Kies een willekeurig onderwerp voor een demo-mail.
+ * Auteur: Khayrallah Issa
+ */
+function pickRandomDemoSubject(): string
+{
+    $subjects = [
+        'Vraag over levertijd',
+        'Bevestiging afspraak',
+        'Aanvullende info gevraagd',
+        'Re: Voorstel showroom-update',
+        'Klacht over levering',
+    ];
+    return $subjects[array_rand($subjects)];
+}
+
+/**
+ * Kies een willekeurige body-template voor een demo-mail.
+ * %s wordt later vervangen door de dealer-naam met sprintf().
+ * Auteur: Khayrallah Issa
+ */
+function pickRandomDemoBody(): string
+{
+    $bodies = [
+        "Hoi,\n\nIk heb nog een vraag over de volgende bestelling. Kun je mij even bellen?\n\nGroeten,\n%s",
+        "Goedemorgen,\n\nDe afspraak op vrijdag is bevestigd. Tot dan.\n\n%s",
+        "Beste,\n\nKun je mij wat meer informatie sturen over de prijzen voor 2026?\n\nGroet,\n%s",
+    ];
+    return $bodies[array_rand($bodies)];
 }
