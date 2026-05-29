@@ -1,0 +1,52 @@
+/* CRM WooPremium uitbreidingen - styling */
+
+/* === Modal overlay (Dealer verwijderen, E-mail versturen) === */
+.crm-modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 1000;
+}
+.crm-modal {
+    background: #fff;
+    width: 540px; max-width: 90vw;
+    padding: 24px 28px;
+    border: 3px solid #C00000;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+.crm-modal h2 { color: #C00000; margin: 0 0 12px; }
+.crm-modal-card {
+    background: #F9F9F9;
+    border: 1px solid #BFBFBF;
+    padding: 12px;
+    margin: 12px 0;
+}
+.crm-modal-note { color: #666; font-style: italic; font-size: 13px; }
+.crm-modal-buttons {
+    margin-top: 18px;
+    display: flex; gap: 12px; justify-content: flex-end;
+}
+.crm-modal-buttons button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #BFBFBF;
+    background: #fff;
+    font-size: 14px;
+}
+.crm-danger {
+    background: #C00000 !important;
+    color: #fff !important;
+    border-color: #C00000 !important;
+    font-weight: bold;
+}
+.crm-danger:disabled { background: #999 !important; cursor: wait; }
+
+/* === Ongelezen badge bij dealer === */
+.crm-unread-badge {
+    display: inline-block; min-width: 18px; height: 18px;
+    padding: 0 6px; border-radius: 9px;
+    background: #C00000; color: #fff;
+    font-size: 11px; font-weight: bold; line-height: 18px;
+    text-align: center; margin-left: 6px;
+}

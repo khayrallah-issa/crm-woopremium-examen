@@ -1,0 +1,26 @@
+{
+    "name": "woopremium/crm-extensions",
+    "description": "Uitbreiding CRM WooPremium - routeplanning, e-mail, dealerbeheer",
+    "type": "project",
+    "require": {
+        "php": ">=8.0",
+        "phpmailer/phpmailer": "^6.9",
+        "webklex/php-imap": "^5.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "CrmExt\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CrmExt\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

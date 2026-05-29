@@ -1,0 +1,26 @@
+# Wachtwoorden en geheimen - NOOIT committen
+crm-extensions/config.php
+
+# Composer dependencies
+crm-extensions/vendor/
+composer.lock
+
+# IDE-bestanden
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS-rommel
+.DS_Store
+Thumbs.db
+~$*
+
+# Test-output
+crm-extensions/test_result.txt
+.phpunit.result.cache
+
+# Lokale backups
+*.bak
+*.backup
+*.orig
