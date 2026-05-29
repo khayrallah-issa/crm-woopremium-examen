@@ -11,7 +11,8 @@
 
 - **[ARCHITECTURE.md](ARCHITECTURE.md)** — waarom de code op deze manier is opgebouwd, gelaagde architectuur, ontwerpkeuzes
 - **[CODE_CONVENTIONS.md](CODE_CONVENTIONS.md)** — gehanteerde codestijl (PSR-12), naamgeving, commit-conventies
-- **[examen-documenten/](examen-documenten/)** — ontwerpdocument, realisatiedocument, aanvullende bewijsstukken
+
+De ontwerp- en realisatiedocumenten (Word) worden apart bij de beoordelaar ingeleverd; deze repository bevat alleen de code en de bijbehorende technische documentatie.
 
 ---
 
