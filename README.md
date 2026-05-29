@@ -7,6 +7,14 @@
 
 ---
 
+## Documentatie
+
+- **[ARCHITECTURE.md](ARCHITECTURE.md)** — waarom de code op deze manier is opgebouwd, gelaagde architectuur, ontwerpkeuzes
+- **[CODE_CONVENTIONS.md](CODE_CONVENTIONS.md)** — gehanteerde codestijl (PSR-12), naamgeving, commit-conventies
+- **[examen-documenten/](examen-documenten/)** — ontwerpdocument, realisatiedocument, aanvullende bewijsstukken
+
+---
+
 ## Wat is dit?
 
 Een uitbreiding van het bestaande CRM-systeem van WooPremium voor het beheren van interieur-dealers. Gebouwd in PHP (met WordPress als basis), JavaScript (Leaflet voor de kaart) en MySQL.
